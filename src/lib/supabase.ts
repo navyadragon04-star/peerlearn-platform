@@ -1,21 +1,18 @@
-import { createClient } from '@supabase/supabase-js';
-import { createClientComponentClient, createServerComponentClient } from '@supabase/auth-helpers-nextjs';
-import { cookies } from 'next/headers';
+import { createClient as createSupabaseClient } from '@supabase/supabase-js';
+import { createBrowserClient } from '@supabase/ssr';
 
-// Client-side Supabase client
-export const supabase = createClient(
+// Browser client for client-side operations
+export const supabase = createSupabaseClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
-// Client component Supabase client
+// Client component Supabase client (using SSR package)
 export const createClient = () => {
-  return createClientComponentClient();
-};
-
-// Server component Supabase client
-export const createServerClient = () => {
-  return createServerComponentClient({ cookies });
+  return createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
 };
 
 // Database types
