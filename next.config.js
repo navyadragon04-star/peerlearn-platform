@@ -7,8 +7,6 @@ const nextConfig = {
       'localhost',
       'avatars.githubusercontent.com',
       'lh3.googleusercontent.com',
-      // Add your Supabase project URL
-      process.env.NEXT_PUBLIC_SUPABASE_URL?.replace('https://', ''),
     ],
     remotePatterns: [
       {
@@ -17,18 +15,8 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    serverActions: true,
-  },
-  webpack: (config) => {
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      net: false,
-      tls: false,
-    };
-    return config;
-  },
+  // Explicitly tell Next.js we're using src directory
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 };
 
 module.exports = nextConfig;
