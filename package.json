@@ -8,24 +8,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit",
-    "supabase:start": "supabase start",
-    "supabase:stop": "supabase stop",
-    "supabase:reset": "supabase db reset",
-    "supabase:migrate": "supabase migration up"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@supabase/supabase-js": "^2.39.0",
-    "@supabase/auth-helpers-nextjs": "^0.8.7",
-    "@supabase/auth-helpers-react": "^0.4.2",
+    "@supabase/ssr": "^0.1.0",
     "socket.io-client": "^4.6.1",
     "@reduxjs/toolkit": "^2.0.1",
     "react-redux": "^9.0.4",
     "zustand": "^4.4.7",
-    "react-query": "^3.39.3",
+    "@tanstack/react-query": "^5.17.0",
     "axios": "^1.6.2",
     "date-fns": "^3.0.0",
     "react-hook-form": "^7.49.2",
@@ -39,7 +34,6 @@
     "class-variance-authority": "^0.7.0",
     "react-dropzone": "^14.2.3",
     "react-markdown": "^9.0.1",
-    "react-pdf": "^7.6.0",
     "agora-rtc-sdk-ng": "^4.20.0",
     "recharts": "^2.10.3",
     "react-calendar": "^4.7.0",
@@ -59,8 +53,7 @@
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
     "prettier": "^3.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.10",
-    "supabase": "^1.142.2"
+    "prettier-plugin-tailwindcss": "^0.5.10"
   },
   "engines": {
     "node": ">=18.0.0",
