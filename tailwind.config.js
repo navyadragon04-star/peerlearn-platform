@@ -2,9 +2,10 @@
 module.exports = {
   darkMode: ['class'],
   content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -50,20 +51,20 @@ module.exports = {
       },
       keyframes: {
         'accordion-down': {
-          from: { height: 0 },
+          from: { height: '0' },
           to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: 0 },
+          to: { height: '0' },
         },
         'fade-in': {
-          from: { opacity: 0 },
-          to: { opacity: 1 },
+          from: { opacity: '0' },
+          to: { opacity: '1' },
         },
         'slide-in': {
-          from: { transform: 'translateY(10px)', opacity: 0 },
-          to: { transform: 'translateY(0)', opacity: 1 },
+          from: { transform: 'translateY(10px)', opacity: '0' },
+          to: { transform: 'translateY(0)', opacity: '1' },
         },
       },
       animation: {
@@ -74,5 +75,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [],
 };
